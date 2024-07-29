@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PokiBlog-Add Blog{% endblock title %}
+
+{% block style %}
+
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/signup.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/editblog.css' %}">
+
+{% comment %} if you want to add the tinymce editor in the user interface you have to all the below js  {% endcomment %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/7.2.1/tinymce.min.js" integrity="sha512-zmlLhIesl+uwwzjoUz/izUsSjAMVb/7fH2ffCbJvYLepAvdvAq1T6ev9edZR8jwRKfM0OTaUyFVO1D7wAwXCEw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        menubar: false,
+    });
+</script>
+
+{% endblock style %}
+
+{% block content %}
+
+<main class="main-container">
+    <div class="form-container">
+        <p class='form-heading'>
+            New Blog
+        </p>
+        <form action="" method="post" class='actual-form'>
+            {% csrf_token %}
+            {{form.non_field_errors}}
+            {% for field in form %}
+                <div class="field-error">
+                    {{field.errors}}
+                </div>
+                <div class="form-field">
+                    {{field}}
+                </div>
+            {% endfor %}
+            <input type="submit" value="Add" class='field' style="padding:0px; border:1px solid black;border-radius:15px;margin-top:10px;font-weight:bold;">
+        </form>
+        {% include "footer.html" %}
+    </div>
+</main>
+
+{% endblock content %}

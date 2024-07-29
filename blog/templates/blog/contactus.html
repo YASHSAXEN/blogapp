@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PokiBlog-ContactUs{% endblock title %}
+
+{% block style %}
+
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/signup.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/editblog.css' %}">
+{% endblock style %}
+
+{% block content %}
+
+<main class="main-container">
+    <div class="form-container">
+        <p class='form-heading'>
+            Contact US
+        </p>
+        <form action="" method="post" class='actual-form'>
+            {% csrf_token %}
+            {{form.non_field_errors}}
+            {% for field in form %}
+                <div class="field-error">
+                    {{field.errors}}
+                </div>
+                <div class="form-field">
+                    {{field}}
+                </div>
+            {% endfor %}
+            {% if status %}
+                <input type="submit" value="Submit" class='field' style="padding:0px; border:1px solid black;border-radius:15px;margin-top:10px;font-weight:bold;">
+            {% else %}
+                <input type="submit" value="Submit" class='field' style="padding:0px; border:1px solid black;border-radius:15px;margin-top:10px;font-weight:bold;" disabled>
+            {% endif %}
+            
+            {% if messages %}
+                {% for message in messages %}
+                    <span class={{message.tags}}>🥳🥳 {{message}} 🥳🥳</span>
+                {% endfor %}
+            {% endif %}
+        </form>
+        {% include "footer.html" %}
+    </div>
+</main>
+
+{% endblock content %}

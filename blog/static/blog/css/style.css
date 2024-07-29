@@ -1,0 +1,177 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    max-height: max-content;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: white;
+    color: white;
+    overflow-x: hidden;
+}
+
+.navbar a{
+    color:black;
+} 
+
+.logo{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 32px;
+    font-style:italic;
+}
+
+.content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.content a p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16.5px;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+.content a p:hover{
+    color: orange;
+}
+
+.buttons{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons div{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons div a{
+    width: 100%;
+    cursor: pointer;
+}
+
+.buttons div a button{
+    width: 100%;
+    height: 35px;
+    border: 0.1px solid black;
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    transition: all;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.buttons div a button:hover{
+    scale: 0.9;    
+}
+
+.buttons div .user{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.buttons div .user p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.dashcontainer{
+    width: 120px!important;
+    height: 100px!important;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    position:absolute;
+    top: 65px;
+    background-color:currentColor;
+    border-radius: 5px;
+}
+
+.dashcontainer a{
+    height: 30%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dashcontainer a:hover{
+    background-color: grey;
+    color: white;
+}
+
+
+.footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.53);
+    padding: 20px;
+}
+
+.icons{
+    display: flex;
+    gap: 25px;
+}
+
+.icons a{
+    color: black;
+}
+
+.icons a i{
+    font-size: 24px;
+}
+
+.footer p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 0.8;
+}

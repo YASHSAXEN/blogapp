@@ -1,0 +1,26 @@
+.main-container{
+    width: 100%;
+    height: max-content;
+    /* max-height: max-content; */
+}
+
+.form-container{
+    min-height: 404px;
+    /* border: 1px solid black; */
+    margin: 0px;
+}
+
+.actual-form{
+    margin: 0px;
+}
+
+.field{
+    cursor: pointer;
+}
+
+.changepass{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    opacity: 0.7;
+}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PokiBlog-Home{% endblock title %}
+
+{% block style %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/home.css' %}">
+{% endblock style %}
+
+{% block content %}
+<main class="main-container">
+    <div class='herosection'>
+        <div class="left-content">
+            <div style='display: flex; flex-direction:column;gap:20px;width: 50%;height: 55%;justify-content: flex-end;margin-top:20px;align-items:center;'>
+                <p class='herosectionheading'>PokiBlog</p>
+                <p class='herosectioncontent'>
+                    Create, edit and read blogs from others around the world. Join our community of passionate creators ans start sharing your unique voice todays.
+                </p>
+                {% if not status %}
+                <a href="{% url 'signup' %}"><button class='herosectionbutton'>Join Us</button></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="aboutus">
+        <div class='innerabout'>
+            <p class='abouheading'>About Us</p>
+            <p class='aboucontent'>
+                Welcome to Pokiblog, a platform dedicated to empowering individuals to share their unique stories and insights. Founded by a team of passionate writers and tech enthusiasts, Pokiblog provides an intuitive space for creating, editing, and discovering blogs. <br><br>
+
+                Our mission is to foster a vibrant community where your voice can be heard and your creativity can flourish. With customizable blog options, an easy-to-use interface, and advanced discoverability features, Pokiblog is designed to help you connect with a global audience. <br><br>
+
+                Join us at Pokiblog and start your blogging journey today. Share your stories, inspire others, and explore the diverse content created by fellow bloggers.
+            </p>
+        </div>
+    </div>
+    <div class="howitworks">
+        <div class="innerwork">
+            <p class="workheading">
+                How it Works
+            </p>
+            <div class='workcontainer'>
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <p>Join our community by creating a free account. Sign up with your email and start your blogging journey with ease.
+                </p>
+            </div>
+            <div class='workcontainer'>
+                <i class="fa-solid fa-plus"></i>
+                <p>Use our user-friendly editor to create and customize your blog
+                </p>
+            </div>
+            <div class='workcontainer'>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <p>Start writing your posts with our intuitive text editor
+                </p>
+            </div>
+            <div class='workcontainer'>
+                <i class="fa-solid fa-upload"></i>
+                <p>Once you're happy with your blog post, hit the publish button.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% include "footer.html" %}
+</main>
+
+{% endblock content %}

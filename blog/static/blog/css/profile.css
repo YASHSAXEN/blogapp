@@ -1,0 +1,45 @@
+.form-container{
+    flex-direction: row-reverse;
+    align-items: center;
+    /* border: 1px solid black; */
+    /* justify-content: space-between; */
+}
+
+.profile-heading{
+    width: 40%;
+    /* border: 1px solid black; */
+    /* height: max-content; */
+    padding: 40px;
+    padding-bottom: 80px;
+    padding-left: 0px;
+}
+
+.form-heading{
+    width: 100%;
+    /* height: 50%; */
+    margin: 40px;
+    font-size: 80px;
+}
+
+.actual-form{
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+.field{
+    width: 80%;
+}
+
+.form-fieldlabel{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.editprofile{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0.8;
+}

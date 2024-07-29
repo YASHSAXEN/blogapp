@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PokiBlog-Blogs{% endblock title %}
+
+{% block style %}
+
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/blogs.css' %}">
+
+{% endblock style %}
+
+{% block content %}
+
+<main class="main-container">
+    <div class='blog-container'>
+    {% if blogs %}
+    {% for blog in blogs %}
+        <div class="blog">
+            <a href="{% url 'blogdetail' blog.id %}"><p class='blog-title'>{{blog.title|truncatewords:8}}</p></a>
+            <div class='blog-author'>
+                <p>{{blog.author}}</p>
+                {% if blog.is_updated %}
+                    <p>{{blog.updated_at}} (Edited)</p>
+                {% else %}
+                    <p>{{blog.created_at}}</p>
+                {% endif %}
+            </div>
+            <p class='blog-content'>{{blog.content|truncatewords:30|striptags}}</p>
+            <div class='view'>
+                <p class='comment'>Comments: {{blog.comments_count}}</p>
+                <a href="{% url 'blogdetail' blog.id %}">view</a>
+            </div>
+        </div>
+    {% endfor %}
+    {% else %}
+        <p class='no-blog'>No Blogs Avialable Now...</p>
+    {% endif %}
+    </div>
+
+    {% include "footer.html" %}
+</main>
+
+{% endblock content %}

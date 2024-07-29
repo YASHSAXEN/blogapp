@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PokiBlog-{{blogdetail.title}} {% endblock title %}
+
+{% block style %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/blogdetail.css' %}">
+
+{% endblock style %}
+
+{% block content %}
+
+<main class="main-container">
+    <div class="blogdetail-container">
+        <div class="blog">
+            <p class='blog-title'>{{blogdetail.title|capfirst}}</p>
+            <div class='blog-author'>
+                <p>{{blogdetail.author}}</p>
+                {% if blogdetail.is_updated %}
+                    <p>{{blogdetail.updated_at}} (Edited)</p>
+                {% else %}
+                    <p>{{blogdetail.created_at}}</p>
+                {% endif %}
+            </div>
+            <div class='blog-content'>{{blogdetail.content|safe}}</div>
+        </div>
+        <div class="comments-container">
+            <p class='comment'>Comments</p>
+                {% if comments %}
+                {% for comment in comments %}
+                    <div class="comment-container">
+                        <div class='comment-user'>
+                            <p>{{comment.0|capfirst}}</p>
+                            <p>{{comment.2}}</p>
+                        </div>
+                       <div class='comment-content'>
+                            <li>{{comment.1|capfirst}}</li>
+                       </div> 
+                    </div>
+                {% endfor %}
+                {% else %}
+                <p class='no-comment'> No Comment Yet!!</p>
+                {% endif %}
+            <div class="add-comment">
+                {% if status %}
+                    <a href="#comment-ADD" class='active'><input type="submit" value="Comment" class='add-button-comment'></a>
+                {% else %}
+                    <input type="submit" value="Comment" class='add-button-comment blur' disabled>
+                {% endif %}
+            </div>
+        </div>
+        <div class="comment-add-container" id='comment-ADD'>
+            <div class="close">
+                <p class="cancel">X</p>
+            </div>
+            <div class="add-comment-heading">
+                <p>Write Comment</p>
+            </div>
+            <form action="" method='post'>
+                {% csrf_token %}
+                <textarea name="comment_content" cols="50" rows="10" placeholder='Write Your Comment' style='padding:20px;font-style:italic;'></textarea>
+                <input type="submit" value="Add Comment">
+            </form>
+        </div>
+    </div>
+    {% include "footer.html" %}
+
+<script src="{% static 'blog/js/blogdetail.js' %}"></script>
+</main>
+
+{% endblock content %}

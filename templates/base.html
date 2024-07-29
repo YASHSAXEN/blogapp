@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock title %}</title>
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% endblock style %}
+</head>
+<body>
+    <div class="main-container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><p>PokiBlog</p></a>
+            </div>
+            <div class="content">
+                <a href="{% url 'home' %}" class="navigation">
+                    <p>Home</p>
+                </a>
+                <a href="{% url 'blogs' %}" class="navigation">
+                    <p>Blogs</p>
+                </a>
+                <a href="{% url 'contactus' %}" class="navigation">
+                    <p>Contact Us</p>
+                </a>
+            </div>
+           {% include "buttons.html" %}
+        </nav>
+        {% block content %}
+        <p>This is the Base page</p>
+        {% endblock content %}
+    </div>
+<script src="{% static 'blog/js/script.js' %}"></script>
+</body>
+</html>

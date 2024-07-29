@@ -1,0 +1,123 @@
+.main-container{
+    width: 100%;
+    height: max-content;
+}   
+
+.dashboard-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dashboard-herosection{
+    min-width: 70%;
+    height: 200px;
+    max-width: max-content;
+    max-height: max-content;
+    /* border: 1px solid black; */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.first{
+    width: 60%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    /* border: 1px solid black; */
+}
+
+.second{
+    min-width: 40%;
+    max-width: max-content;
+    /* border: 1px solid black; */
+}
+
+.heading{
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.heading-value{
+    opacity: 0.8;
+}
+
+.no-blog{
+    height: max-content;
+    min-height: 60px;
+    font-size: 25px;
+}
+
+.edit{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.blog-button{
+    width: 100px;
+    height: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+    font-style: italic;
+    border-radius: 10px; 
+    transition: all;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.blog-button:hover{
+    scale: 0.9;
+}
+
+.add-blog{
+    width: 50%;
+    padding:10px;
+}
+
+.mid{
+    display: flex;
+    justify-content: center;
+}
+
+.add-blog a button{
+    width: 100px;
+    height: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+    font-style: italic;
+    border-radius: 10px; 
+    transition: all;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    /* background-color: rgba(118, 244, 118, 1); */
+}
+
+.add-blog a button:hover{
+    scale: 0.9;
+}
+
+.blog{
+    height: max-content;
+}
+
+.success{
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    color: green;
+}

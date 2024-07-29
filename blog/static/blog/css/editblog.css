@@ -1,0 +1,15 @@
+.blogged-content{
+    min-height: 250px;
+    max-height: max-content;
+    font-size: 15px;
+}
+
+.actual-form{
+    min-width: 70%;
+    max-width: max-content;
+}
+
+.blogged-title{
+    height: 40px;
+    font-size: 15px;
+}

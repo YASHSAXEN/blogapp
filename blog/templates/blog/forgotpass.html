@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PokiBlog-Forgot Password{% endblock title %}
+
+{% block style %}
+
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/signup.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/login.css' %}">
+<style>
+    .success{
+        text-align:center;
+        display:block;
+    }
+</style>
+{% endblock style %}
+
+{% block content %}
+
+<main class="main-container">
+    {% if messages %}
+        {% for message in messages %}
+            <span class={{message.tags}}>{{message}}</span>
+        {% endfor %}
+    {% endif %}
+    <div class="form-container">
+        <p class='form-heading'>
+            Change Password
+        </p>
+        <form action="" method="post" class='actual-form'>
+            {% csrf_token %}
+            {{form.non_field_errors}}
+            {% for field in form %}
+            <div class="form-field">
+                {{field}}
+            </div>
+            <div class="field-error">
+                {{field.errors}}
+            </div>
+            {% endfor %}
+            <input type="submit" value="Change" class='field' style="padding:0px; border:1px solid black;border-radius:15px;margin-top:10px;font-weight:bold;">
+        </form>
+    </div>
+    {% include "footer.html" %}
+</main>
+
+{% endblock content %}

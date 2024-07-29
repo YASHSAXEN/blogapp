@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PokiBlog-Profile{% endblock title %}
+
+{% block style %}
+
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'blog/css/signup.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/profile.css' %}">
+{% endblock style %}
+
+{% block content %}
+
+<main class="main-container">
+    <div class="form-container">
+        <div class='profile-heading'>
+            <p class='form-heading'>
+                Profile
+            </p>
+            <p class='form-heading'>
+                Page
+            </p>
+        </div>
+        <form action="" method="post" class='actual-form'>
+            {% csrf_token %}
+
+            {% if messages %}
+                {% for message in messages %}
+                    <span class={{message.tags}}>🥳🥳 {{message}} 🥳🥳</span>
+                {% endfor %}
+            {% endif %}
+
+            {{form.non_field_errors}}
+            {% for field in form %}
+                <div class="field-error">
+                    {{field.errors}}
+                    <p class='form-fieldlabel'>{{field.label_tag}}</p>
+                </div>
+                <div class="form-field">
+                    {{field}}
+                </div>
+            {% endfor %}
+            <input type="submit" value="Update" class='field forjs' style="padding:0px; border:1px solid black;border-radius:15px;margin-top:10px;font-weight:bold;">
+            <div style='display: flex;justify-content:flex-start;width: 100%;padding-left:10px;'>
+                <label class='editprofile' for='checkbox'>Do you want to edit profile:</label>&nbsp;<input type="checkbox" name="enable-disable" id="checkbox" class='enable-disable' >
+            </div>
+            
+        </form>
+    </div>
+    {% include "footer.html" %}
+</main>
+
+<script src="{% static 'blog/js/profile.js' %}"></script>
+
+{% endblock content %}
