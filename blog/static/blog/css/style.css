@@ -264,6 +264,9 @@ a{
     .content{
         display: none;
     }
+    .menubar{
+        display: block!important;
+    }
     .logo{
         width: 28%;
     }
