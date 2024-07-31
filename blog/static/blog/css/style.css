@@ -54,7 +54,7 @@ a{
 .content a p{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 16.5px;
-    transition: all;
+    transition:color;
     transition-duration: 0.5s;
 }
 
@@ -261,11 +261,17 @@ a{
     .buttons div a button{
         display: none;
     }
+    .first{
+        display: none!important;
+    }
     .content{
-        display: none;
+        visibility: hidden;
     }
     .menubar{
-        display: block!important;
+        display: flex !important;
+        color: black;
+        font-size: 24px;
+        margin-right: 15px;
     }
     .logo{
         width: 28%;
@@ -305,6 +311,9 @@ a{
     .logo{
         width: 35%;
     }
+    .content{
+        width: 40%;
+    }
 
 }
 
@@ -318,4 +327,8 @@ a{
     .footer p{
         font-size: 14px;
     }
+    .content{
+        width: 30%;
+    }
+
 }
