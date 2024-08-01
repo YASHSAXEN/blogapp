@@ -66,3 +66,52 @@
     font-style: italic;
     color: green;
 }
+
+@media screen and (max-width:1200px) {
+    .actual-form{
+        width: 400px;
+    }
+}
+@media screen and (max-width:600px) {
+    .actual-form{
+        width: 350px;
+    }
+    .form-heading{
+        font-size: 32px;
+    }
+    .forgetpass{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media screen and (max-width:400px) {
+    .actual-form{
+        width: 300px;
+    }
+}
+
+@media screen and (min-height:800px) {
+    .footer{
+        position: absolute;
+        bottom: 0px;
+    }
+    .main-container{
+        height: 93px;
+    }
+    .form-heading{
+        margin-top: 80px;
+    }
+}
+
+@media screen and (min-height:900px) {
+    .form-heading{
+        margin-top: 110px;
+    }
+    
+}
+@media screen and (min-height:1200px) {
+    .form-heading{
+        margin-top: 250px;
+    }
+    
+}

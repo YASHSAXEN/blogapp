@@ -90,3 +90,80 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 35px;
 }
+
+@media screen and (max-width:880px){
+    .blog{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .blog{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .blog{
+        width: 75%;
+    }
+    .no-blog{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .blog-title{
+        font-size: 23px;
+    }
+    .blog-author p{
+        font-size: 14px;
+    }
+    .blog-content{
+        font-size: 16px!important;
+    }
+    .view a{
+        font-size: 16px!important;
+    }
+    .blog-author{
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    .blog-button{
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .no-blog{
+        font-size: 26px;
+    }
+}
+
+
+@media screen and (min-width:360px) and (min-height:700px){
+    .no-blog{
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:360px){
+    .blog-author{
+        margin-bottom: 30px;
+    }
+    .no-blog{
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-height:1000px){
+    .footer{
+        position:fixed;
+        bottom: 0px;
+        background-color: white;
+    }
+    .blog-container{
+        margin-bottom: 140px;
+    }
+}

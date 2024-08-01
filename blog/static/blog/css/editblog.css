@@ -13,3 +13,19 @@
     height: 40px;
     font-size: 15px;
 }
+
+@media screen and (max-width:860px) {
+    .actual-form{
+        width: 90%!important;
+        padding: 0px!important;
+        padding-top: 40px!important;
+    }
+    
+}
+
+@media screen and (max-width:400px) {
+    .actual-form input{
+        font-size: 14px;
+    }
+
+}

@@ -121,3 +121,115 @@
     font-style: italic;
     color: green;
 }
+
+@media screen and (max-width:1010px) {
+    .dashboard-herosection{
+        min-width: 80%;
+    }
+}
+@media screen and (max-width:880px) {
+    .first p{
+        font-size: 14px;
+    }
+    .dashboard-herosection{
+        min-width: 85%;
+    }
+    .blog{
+        width: 60%;
+    }
+    .add-blog{
+        position: relative;
+        left: -50px;
+    }
+}
+@media screen and (max-width:770px) {
+    .dashboard-herosection{
+        flex-direction: column;
+        height: max-content;
+        align-items: start;
+        gap: 20px;
+    }
+    .first p{
+        font-size: 17px;
+    }
+    .first{
+        width: 100%;
+        display: flex!important;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .blog{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .blog{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .add-blog{
+        left: -70px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .first p{
+        font-size: 15px!important;
+    }
+    .blog-title{
+        font-size: 23px;
+    }
+    .blog-author p{
+        font-size: 14px;
+    }
+    .blog-content{
+        font-size: 16px!important;
+    }
+    .view a{
+        font-size: 16px!important;
+    }
+    .blog-author{
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    .blog-button{
+        width: 80px;
+    }
+    .add-blog{
+        left: -50px;
+    }
+}
+@media screen and (max-width:380px) {
+    .first p span{
+        display: block;
+    }
+    .first p{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dashboard-herosection{
+        min-width: 90%;
+    }
+}
+
+@media screen and (max-width:360px){
+    .blog-author{
+        margin-bottom: 30px;
+    }
+    .add-blog{
+        left: -40px;
+    }
+}
+
+@media screen and (min-height:700px) and (min-width:700px){
+    .footer{
+        position: absolute;
+        bottom: 0px;
+    }
+}
